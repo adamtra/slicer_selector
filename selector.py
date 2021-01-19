@@ -285,12 +285,12 @@ class selectorLogic(ScriptedLoadableModuleLogic):
     point_Ijk = [ int(round(c)) for c in point_Ijk[0:3] ]
     # Print output
     data = slicer.util.arrayFromVolume(volumeNode)
-    np.save(dir_path + '/image.npy', data)
-    np.save(dir_path + '/coord.npy', point_Ijk)
+    np.save(dir_path + '/utils/image.npy', data)
+    np.save(dir_path + '/utils/coord.npy', point_Ijk)
 
     print('Snake')
     command_line = ["/usr/bin/python3",
-                    dir_path + "/snake.py",
+                    dir_path + "/utils/snake.py",
                     str(int(mode)),
                     str(int(float(iterations))),
                     str(int(float(smoothing))),
@@ -301,8 +301,8 @@ class selectorLogic(ScriptedLoadableModuleLogic):
     print(command_result)
 
     
-    data = np.load(dir_path + '/out.npy')
-    coord = np.load(dir_path + '/coord.npy')
+    data = np.load(dir_path + '/utils/out.npy')
+    coord = np.load(dir_path + '/utils/coord.npy')
     new_data = []
 
     for i, val_i in enumerate(data):

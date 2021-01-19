@@ -20,7 +20,7 @@ def save_img(img, ls, name):
     fig.subplots_adjust(top=1, bottom=0, right=1, left=0,
                         hspace=0, wspace=0)
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    fig.savefig(dir_path + '/tmp/' + name, pad_inches=0, bbox_inches='tight')
+    fig.savefig(dir_path + '/../tmp/' + name, pad_inches=0, bbox_inches='tight')
     plt.close(fig)
 
 
