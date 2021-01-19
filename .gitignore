@@ -1,0 +1,5 @@
+.vscode
+*.pyc
+coord.npy
+image.npy
+out.npy
